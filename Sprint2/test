@@ -1,0 +1,60 @@
+var toStroke = false;
+        //if user is in bounds and the button is selected then the stroke will apear 
+        if(this.bounds || Button.selected == this){
+            ctx.fillStyle= this.over;
+            toStroke = true;
+        //if user is in bound of the button then the strke will be selected with the fillstyle still there 
+        }else if(this.bound){
+
+            ctx.fillStyle = this.over;
+            toStroke = true;
+        }
+        //if user is not in boundary then the fill style will remian there without anything being selected 
+        else{
+            ctx.fillStyle = this.fill;
+        }
+        //this.drawRect= allows the rectangle
+        this.drawRect(this.x, this.y, this.w, this.h, this.fill, toStroke);
+        //ctx.fillStyle = "rgba(255,250,240,220)";
+        ctx.beginPath()
+        ctx.fill();
+}
+    
+    drawRect(x,y,w,h,col, toStroke){
+        ctx.save();
+        ctx.beginPath();
+        ctx.rect(x, y, w, h);
+        ctx.fillStyle = col;
+        ctx.fill();
+        if(toStroke){
+            ctx.stroke()
+        }
+        //ctx.restore();
+    }
+
+        if(Button.selected == this){
+            ctx.fillStyle = this.over;
+            
+            //ctx.fillStyle = "rgb(255,255,255)";
+            
+        }
+        else if(this.bound){
+
+            ctx.fillStyle = this.over;
+       
+            //ctx.fillStyle = "rgb(255,0,0)";
+
+        }
+        else{
+            ctx.fillStyle = this.fill;
+        }
+        
+        ctx.beginPath();
+        ctx.rect(this.x,this.y,this.w,this.h);
+        ctx.strokeStyle = this.stroke;
+        ctx.lineWidth = 7;
+        ctx.fill();
+        ctx.stroke();
+        
+
+
