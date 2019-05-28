@@ -51,35 +51,37 @@ class controlobject {
 
         //colarray here will change colour of the dragging rectangle 
         mUp(e){
+
+            if(Button.selectedShape == "undo"){
+                this.objectSet.pop();
+                Button.selectedShape ="";
+            }
+            else if(Button.selectedShape == "reset"){
+                this.objectSet = [];
+                Button.selectedShape = "";
+            }
         
         //this function helps to define the dragging ellipse
  
         //establishing the conditions for the dragging ellipse
         if(this.mouseDown == true && this.rectBound == true){
-            console.log(ShapeButton.selectedShape);
+            console.log(Button.selectedShape);
             //linking the shape buttons with drawing the shapes 
-            if(ShapeButton.selectedShape == "rectangle"){
+            if(Button.selectedShape == "rectangle"){
                 var ROne = new Rectangle(this.xMouseStart, this.yMouseStart, this.dw, this.dh, Swatch.selectedColour);
                 this.objectSet.push(ROne);
             }
-            else if(ShapeButton.selectedShape == "ellipse"){
+            else if(Button.selectedShape == "ellipse"){
                 var EOne = new Ellipse(this.xMouseStart, this.yMouseStart, this.xMouse, this.yMouse, Swatch.selectedColour);
                 this.objectSet.push(EOne);
             }
-            else if(ShapeButton.selectedShape == "circle"){
+            else if(Button.selectedShape == "circle"){
                 console.log("in circle");
                 var COne = new Circle(this.xMouse, this.yMouse, this.xMouseStart, this.yMouseStart, Swatch.selectedColour);
                 this.objectSet.push(COne);
             }
 
-            else if(ShapeButton.selectedShape == "undo"){
-                this.objectSet.pop();
-                ShapeButton.selected ="";
-            }
-            else if(ShapeButton.selectedShape == "reset"){
-                this.objectSet = [];
-                ShapeButton.selected = "";
-            }
+            
             //console.log(this.objectSet);
            
            

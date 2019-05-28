@@ -2,7 +2,7 @@
 
 console.log("shape buttons is called");
 
-class ShapeButton{
+class Button{
     constructor(text, x, y,w, h, stroke, fill, textC,over,canvas){
         this.x = x;
         this.y =y;
@@ -40,8 +40,8 @@ class ShapeButton{
     mClick(e){
         if(this.bound == true){
             
-            ShapeButton.selected = this;
-            ShapeButton.selectedShape =this.text;
+            Button.selected = this;
+            Button.selectedShape =this.text;
            
         }
     }
@@ -61,7 +61,7 @@ class ShapeButton{
     }
 
     draw(){
-        if(ShapeButton.selected == this){
+        if(Button.selected == this){
             ctx.fillStyle = this.over;
             
             //ctx.fillStyle = "rgb(255,255,255)";
@@ -109,5 +109,5 @@ class ShapeButton{
 
 
 }
-ShapeButton.selected ="";
-ShapeButton.selectedShape ="";
+Button.selected ="";
+Button.selectedShape ="";

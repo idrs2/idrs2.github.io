@@ -7,12 +7,12 @@ var myT = new controlobject(canvas,241,30,500,620);
 objectSet.push(myT);
 //SHAPE BUTTONS
 //(text, x, y,w, h, stroke, fill, textC,over,canvas)
-var ShapeOne = new ShapeButton("rectangle",20, 30, 200,50, colArray[2][2], colArray[2][2], colArray[0][3],colArray[0][0], canvas);
-var ShapeTwo = new ShapeButton("ellipse",20, 100, 200,50, colArray[2][2], colArray[2][2], colArray[0][3],colArray[0][0],canvas);
-var ShapeThree = new ShapeButton("circle",20, 170, 200,50, colArray[2][2], colArray[2][2], colArray[0][3],colArray[0][0],canvas);
+var ShapeOne = new Button("rectangle",20, 30, 200,50, colArray[2][2], colArray[2][2], colArray[0][3],colArray[0][0], canvas);
+var ShapeTwo = new Button("ellipse",20, 100, 200,50, colArray[2][2], colArray[2][2], colArray[0][3],colArray[0][0],canvas);
+var ShapeThree = new Button("circle",20, 170, 200,50, colArray[2][2], colArray[2][2], colArray[0][3],colArray[0][0],canvas);
 //create undo and reset button
-var ShapeFour = new ShapeButton("undo",20, 500, 200,30, colArray[2][2], colArray[2][2], colArray[0][3],colArray[0][0],canvas);
-var ShapeFive = new ShapeButton("reset",20, 550, 200,30, colArray[2][2], colArray[2][2], colArray[0][3],colArray[0][0],canvas);
+var ShapeFour = new Button("undo",20, 500, 200,30, colArray[2][2], colArray[2][2], colArray[0][3],colArray[0][0],canvas);
+var ShapeFive = new Button("reset",20, 550, 200,30, colArray[2][2], colArray[2][2], colArray[0][3],colArray[0][0],canvas);
 objectSet.push(ShapeOne,ShapeTwo,ShapeThree,ShapeFour,ShapeFive);
 
 //COLOURS BUTTONS
