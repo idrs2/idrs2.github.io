@@ -80,6 +80,11 @@ class controlobject {
                 var COne = new Circle(this.xMouse, this.yMouse, this.xMouseStart, this.yMouseStart, Swatch.selectedColour);
                 this.objectSet.push(COne);
             }
+            else if(Button.selectedShape == "fivedot"){
+                var FDFour = new FiveDot(this.xMouse, this.yMouse, 80,colArray[1][7], colArray[1][6], colArray[1][5]);
+                this.objectSet.push(FDFour);
+            }
+            
 
             
             //console.log(this.objectSet);
@@ -129,37 +134,27 @@ class controlobject {
         
 
         draw(){
-            if(Button.selectedShape == "rectangle"){
-                this.drawRect(this.xMouseStart, this.yMouseStart, this.dw, this.dh);
-            }
-            if(Button.selectedShape == "circle"){
-                this.drawRect(this.xMouseStart, this.yMouseStart, this.dw, this.dh);
-                this.drawCircle(this.xMouseStart, this.yMouseStart,this.xMouse, this.yMouse);
-            }
-            //this.drawRect(this.xMouseStart, this.yMouseStart, this.dw, this.dh);
-
            
             //for the dragging guided rectangle
-            
+            this.drawRect(this.xMouseStart, this.yMouseStart, this.dw, this.dh);
             
 
             
+       
+    
+           
+
         }
-        drawCircle(xS,yS,xM, yM){
-            var xC = (xS + xM)/2;
-            var yC = (yS + yM)/2;
-            
-            
-            var r = 20;
+
+      
+
+        drawCircle(x,y,r){
             ctx.beginPath();
-            ctx.arc(xC, yC, r, 0, 2*Math.PI);
+            ctx.arc(x,y,r,0,2*Math.PI);
+            ctx.lineWidth = 1;
             ctx.strokeStyle = Swatch.selectedColour;
-            ctx.lineWidth = 2;
             ctx.stroke();
-            
         }
-
-        
     
         //this function draw the rectangle that is DRAWN 
         drawRect(x,y,w,h){
