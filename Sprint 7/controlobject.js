@@ -16,7 +16,7 @@ class controlobject {
         this.y = y;
         this.w = w;
         this.h = h;
-        
+        this.r = 0;
         //variables define the width and height for the rectangle that is drawn on the screen(dragging rectangle)
         this.dw = 0;
         this.dh = 0;
@@ -44,6 +44,13 @@ class controlobject {
         this.yMouse = e.offsetY;
         //for the boundary 
         this.rectBound = this.boundsCheck (this.xMouse, this.yMouse, this.x, this.y, this.w, this.h);
+        if(this.mouseDown == true && this.rectBound == true){
+            this.r = Brushwidth_Button.selectedWidth;
+            if(Button.selectedShape == "brush"){
+                var BOne = new Brush(this.xMouse, this.yMouse, this.r, Swatch.selectedColour);
+                this.objectSet.push(BOne);
+            }
+    }
         //calling rectBound
         //console.log(this.rectBound);
         //console.log("mouse move event") 
@@ -56,7 +63,7 @@ class controlobject {
                 this.objectSet.pop();
                 Button.selectedShape ="";
             }
-            else if(Button.selectedShape == "reset"){
+            else if(Button.selectedShape == "clear"){
                 this.objectSet = [];
                 Button.selectedShape = "";
             }
@@ -80,17 +87,16 @@ class controlobject {
                 var COne = new Circle(this.xMouse, this.yMouse, this.xMouseStart, this.yMouseStart, Swatch.selectedColour);
                 this.objectSet.push(COne);
             }
-            else if(Button.selectedShape == "fivedot"){
-                var FDFour = new FiveDot(this.xMouse, this.yMouse, 80,colArray[1][7], colArray[1][6], colArray[1][5]);
-                this.objectSet.push(FDFour);
-            }
+           
             else if(Button.selectedShape == "line"){
                 var LOne = new Line(this.xMouse, this.yMouse, this.xMouseStart, this.yMouseStart, Swatch.selectedColour);
                 this.objectSet.push(LOne);
             }
 
+ 
+
             
-            //console.log(this.objectSet);
+           
            
            
             
@@ -113,8 +119,9 @@ class controlobject {
         update(){
         //function for background/boundary rectangle 
         //the variables will be called again in the main which will define the position of the background/boundary reectangle   
-        this.drawBoundaryRect(this.x, this.y,this.w,this.h,colArray[0][0]);
+        this.drawBoundaryRect(this.x, this.y,this.w,this.h);
         this.drawRectangle(19,578,200,80,colArray[2][3]);
+        
 
 
 
@@ -138,9 +145,12 @@ class controlobject {
         
 
         draw(){
+            if(Button.selectedShape == "line" || Button.selectedShape == "rectangle" || Button.selectedShape == "ellipse" || Button.selectedShape == "Circle"){
+                this.drawRect(this.xMouseStart, this.yMouseStart, this.dw, this.dh);
+            }
            
             //for the dragging guided rectangle
-            this.drawRect(this.xMouseStart, this.yMouseStart, this.dw, this.dh);
+            ;
             
 
             
@@ -151,7 +161,7 @@ class controlobject {
         }
 
         
-
+        //circle being dragged onto canvas 
         drawCircle(x,y,r){
             ctx.beginPath();
             ctx.arc(x,y,r,0,2*Math.PI);
@@ -159,6 +169,8 @@ class controlobject {
             ctx.strokeStyle = Swatch.selectedColour;
             ctx.stroke();
         }
+
+    
     
         //this function draw the rectangle that is DRAWN 
         drawRect(x,y,w,h){
@@ -181,7 +193,7 @@ class controlobject {
             ctx.beginPath();
             ctx.rect(x,y,w,h);
             ctx.lineWidth = 12;
-            ctx.fillStyle = col; 
+            ctx.fillStyle = "rgb(255,255,255)"; 
             ctx.strokeStyle = colArray[0][4]
             ctx.stroke();
             ctx.fill();

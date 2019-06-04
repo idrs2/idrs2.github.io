@@ -13,12 +13,21 @@ var ShapeThree = new Button("circle",40, 140, 150,40, colArray[2][2], colArray[2
 
 //create undo and reset button
 var ShapeFour = new Button("undo",20, 480, 200,30, colArray[2][2], colArray[2][2], colArray[0][3],colArray[0][0],canvas);
-var ShapeFive = new Button("reset",20, 530, 200,30, colArray[2][2], colArray[2][2], colArray[0][3],colArray[0][0],canvas);
+var ShapeFive = new Button("clear",20, 530, 200,30, colArray[2][2], colArray[2][2], colArray[0][3],colArray[0][0],canvas);
 //fivedot 
-var ShapeSix = new Button("fivedot",40, 195, 150,40, colArray[2][2], colArray[2][2], colArray[0][3],colArray[0][0],canvas);
-var ShapeSeven = new Button("line",40, 250, 150,40, colArray[2][2], colArray[2][2], colArray[0][3],colArray[0][0],canvas);
+var ShapeSix = new Button("line",40, 195, 150,40, colArray[2][2], colArray[2][2], colArray[0][3],colArray[0][0],canvas);
+var ShapeSeven = new Button("brush",40, 250, 150,40, colArray[2][2], colArray[2][2], colArray[0][3],colArray[0][0],canvas);
+
+
 objectSet.push(ShapeOne,ShapeTwo,ShapeThree,ShapeFour,ShapeFive,ShapeSix,ShapeSeven);
-//line width 
+//brush width 
+//(text, x, y, w, h, width, stroke, fill, textC, over, canvas)
+var bw1 = new Brushwidth_Button("XS", 10, 300, 30, 30, 2, colArray[0][3], colArray[0][3], colArray[0][5], colArray[0][0], canvas);
+var bw2 = new Brushwidth_Button("S", 55, 300, 30, 30, 5, colArray[0][3], colArray[0][3], colArray[0][5], colArray[0][0], canvas);
+var bw3 = new Brushwidth_Button("M", 100, 300, 30, 30, 10, colArray[0][3], colArray[0][3], colArray[0][5], colArray[0][0], canvas);
+var bw4 = new Brushwidth_Button("L", 145, 300, 30, 30, 15, colArray[0][3], colArray[0][3], colArray[0][5], colArray[0][0], canvas);
+var bw5 = new Brushwidth_Button("XL", 190, 300, 30, 30, 20, colArray[0][3], colArray[0][3], colArray[0][5], colArray[0][0], canvas);
+objectSet.push(bw1, bw2, bw3, bw4, bw5);
 
 
 //COLOURS BUTTONS
@@ -63,11 +72,9 @@ var C27= new Swatch(920,590,60,60, colArray[2][2], colArray[2][9],colArray[2][9]
 //10th set - black, white 
 var C28= new Swatch(50,590,60,60, colArray[2][2], colArray[0][0],colArray[0][0], canvas);
 var C29= new Swatch(120,590,60,60, colArray[2][2], colArray[0][3],colArray[0][3], canvas);
-
-
-
 objectSet.push(C1,C2,C3,C4,C5,C6,C7,C8,C9,C10,C11,C12,C13,C14,C15,C16,C17,C18,
-C19,C20,C21,C22,C23,C24,C25,C26,C27,C28,C29);  
+C19,C20,C21,C22,C23,C24,C25,C26,C27,C28,C29); 
+
 
 
 
