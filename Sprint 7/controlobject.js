@@ -145,7 +145,7 @@ class controlobject {
         
 
         draw(){
-            if(Button.selectedShape == "line" || Button.selectedShape == "rectangle" || Button.selectedShape == "ellipse" || Button.selectedShape == "Circle"){
+            if(Button.selectedShape == "line" || Button.selectedShape == "rectangle" || Button.selectedShape == "ellipse" || Button.selectedShape == "circle"){
                 this.drawRect(this.xMouseStart, this.yMouseStart, this.dw, this.dh);
             }
            

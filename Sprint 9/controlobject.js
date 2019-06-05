@@ -88,6 +88,7 @@ class controlobject {
                 this.objectSet.push(COne);
             }
            
+           
             else if(Button.selectedShape == "line"){
                 var LOne = new Line(this.xMouse, this.yMouse, this.xMouseStart, this.yMouseStart,this.lw, Swatch.selectedColour);
                 this.objectSet.push(LOne);

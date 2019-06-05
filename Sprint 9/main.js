@@ -7,27 +7,36 @@ var myT = new controlobject(canvas,241,30,500,640);
 objectSet.push(myT);
 //SHAPE BUTTONS
 //(text, x, y,w, h, stroke, fill, textC,over,canvas)
-var ShapeOne = new Button("rectangle",40, 30, 150,40, colArray[2][2], colArray[2][2], colArray[0][3],colArray[0][0], canvas);
-var ShapeTwo = new Button("ellipse",40, 85, 150,40, colArray[2][2], colArray[2][2], colArray[0][3],colArray[0][0],canvas);
-var ShapeThree = new Button("circle",40, 140, 150,40, colArray[2][2], colArray[2][2], colArray[0][3],colArray[0][0],canvas);
+var Shape1 = new Button("rectangle",40, 30, 150,40, colArray[2][2], colArray[2][2], colArray[0][3],colArray[0][0], canvas);
+var Shape2 = new Button("ellipse",40, 85, 150,40, colArray[2][2], colArray[2][2], colArray[0][3],colArray[0][0],canvas);
+var Shape3 = new Button("circle",40, 140, 150,40, colArray[2][2], colArray[2][2], colArray[0][3],colArray[0][0],canvas);
 
 //create undo and reset button
-var ShapeFour = new Button("undo",20, 480, 200,30, colArray[2][2], colArray[2][2], colArray[0][3],colArray[0][0],canvas);
-var ShapeFive = new Button("clear",20, 530, 200,30, colArray[2][2], colArray[2][2], colArray[0][3],colArray[0][0],canvas);
-//fivedot 
-var ShapeSix = new Button("line",40, 195, 150,40, colArray[2][2], colArray[2][2], colArray[0][3],colArray[0][0],canvas);
-var ShapeSeven = new Button("brush",40, 250, 150,40, colArray[2][2], colArray[2][2], colArray[0][3],colArray[0][0],canvas);
+var Shape4 = new Button("undo",20, 480, 200,30, colArray[2][2], colArray[2][2], colArray[0][3],colArray[0][0],canvas);
+var Shape5 = new Button("clear",20, 530, 200,30, colArray[2][2], colArray[2][2], colArray[0][3],colArray[0][0],canvas);
+
+var Shape6 = new Button("line",40, 350, 150,40, colArray[2][2], colArray[2][2], colArray[0][3],colArray[0][0],canvas);
+var Shape7 = new Button("brush",40, 250, 150,40, colArray[2][2], colArray[2][2], colArray[0][3],colArray[0][0],canvas);
 
 
-objectSet.push(ShapeOne,ShapeTwo,ShapeThree,ShapeFour,ShapeFive,ShapeSix,ShapeSeven);
+
+
+objectSet.push(Shape1,Shape2,Shape3,Shape4,Shape5,Shape6,Shape7);
 //brush width 
 //(text, x, y, w, h, width, stroke, fill, textC, over, canvas)
-var bw1 = new Brushwidth_Button("XS", 10, 300, 30, 30, 3, colArray[0][3], colArray[0][3], colArray[0][5], colArray[0][0], canvas);
-var bw2 = new Brushwidth_Button("S", 55, 300, 30, 30, 7, colArray[0][3], colArray[0][3], colArray[0][5], colArray[0][0], canvas);
-var bw3 = new Brushwidth_Button("M", 100, 300, 30, 30, 12, colArray[0][3], colArray[0][3], colArray[0][5], colArray[0][0], canvas);
-var bw4 = new Brushwidth_Button("L", 145, 300, 30, 30, 17, colArray[0][3], colArray[0][3], colArray[0][5], colArray[0][0], canvas);
-var bw5 = new Brushwidth_Button("XL", 190, 300, 30, 30, 22, colArray[0][3], colArray[0][3], colArray[0][5], colArray[0][0], canvas);
+var bw1 = new width_Button("XS", 10, 300, 30, 30,0, 3, colArray[0][3], colArray[0][3], colArray[0][5], colArray[0][0], canvas);
+var bw2 = new width_Button("S", 55, 300, 30, 30, 0,7, colArray[0][3], colArray[0][3], colArray[0][5], colArray[0][0], canvas);
+var bw3 = new width_Button("M", 100, 300, 30, 30,0, 12, colArray[0][3], colArray[0][3], colArray[0][5], colArray[0][0], canvas);
+var bw4 = new width_Button("L", 145, 300, 30, 30,0, 17, colArray[0][3], colArray[0][3], colArray[0][5], colArray[0][0], canvas);
+var bw5 = new width_Button("XL", 190, 300, 30, 30,0, 22, colArray[0][3], colArray[0][3], colArray[0][5], colArray[0][0], canvas);
 objectSet.push(bw1, bw2, bw3, bw4, bw5);
+//lineWidth
+var lw1 = new width_Button("XS", 10, 400, 30, 30, 2, 0, colArray[0][3], colArray[0][3], colArray[0][5], colArray[0][0], canvas);
+var lw2 = new width_Button("S", 55, 400, 30, 30, 5, 0, colArray[0][3], colArray[0][3], colArray[0][5], colArray[0][0], canvas);
+var lw3 = new width_Button("M", 100, 400, 30, 30, 10, 0, colArray[0][3], colArray[0][3], colArray[0][5], colArray[0][0], canvas);
+var lw4 = new width_Button("L", 145, 400, 30, 30, 15, 0, colArray[0][3], colArray[0][3], colArray[0][5], colArray[0][0], canvas);
+var lw5 = new width_Button("XL", 190, 400, 30, 30, 20, 0, colArray[0][3], colArray[0][3], colArray[0][5], colArray[0][0], canvas);
+objectSet.push(lw1, lw2, lw3, lw4, lw5);
 
 
 //COLOURS BUTTONS
