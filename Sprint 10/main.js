@@ -7,35 +7,36 @@ var myT = new controlobject(canvas,241,30,500,640);
 objectSet.push(myT);
 //SHAPE BUTTONS
 //(text, x, y,w, h, stroke, fill, textC,over,canvas)
-var Shape1 = new Button("rectangle",40, 30, 150,40, colArray[2][2], colArray[2][2], colArray[0][3],colArray[0][0], canvas);
-var Shape2 = new Button("ellipse",40, 85, 150,40, colArray[2][2], colArray[2][2], colArray[0][3],colArray[0][0],canvas);
-var Shape3 = new Button("circle",40, 140, 150,40, colArray[2][2], colArray[2][2], colArray[0][3],colArray[0][0],canvas);
+var Shape1 = new Button("rectangle",36, 30, 160,35, colArray[2][2], colArray[2][2], colArray[0][3],colArray[0][0], canvas);
+var Shape2 = new Button("ellipse",36, 80, 160,35, colArray[2][2], colArray[2][2], colArray[0][3],colArray[0][0],canvas);
+var Shape3 = new Button("circle",36, 130, 160,35, colArray[2][2], colArray[2][2], colArray[0][3],colArray[0][0],canvas);
 
 //create undo and reset button
 var Shape4 = new Button("undo",20, 480, 200,30, colArray[2][2], colArray[2][2], colArray[0][3],colArray[0][0],canvas);
 var Shape5 = new Button("clear",20, 530, 200,30, colArray[2][2], colArray[2][2], colArray[0][3],colArray[0][0],canvas);
 
-var Shape6 = new Button("line",40, 350, 150,40, colArray[2][2], colArray[2][2], colArray[0][3],colArray[0][0],canvas);
-var Shape7 = new Button("brush",40, 250, 150,40, colArray[2][2], colArray[2][2], colArray[0][3],colArray[0][0],canvas);
-var Shape8 = new Button("square",40,195,150,40,colArray[2][2], colArray[2][2], colArray[0][3],colArray[0][0],canvas);
+var Shape6 = new Button("line",36, 382, 160,35, colArray[2][2], colArray[2][2], colArray[0][3],colArray[0][0],canvas);
+var Shape7 = new Button("brush",36, 280, 160,35, colArray[2][2], colArray[2][2], colArray[0][3],colArray[0][0],canvas);
+var Shape8 = new Button("square",36,180,160,35,colArray[2][2], colArray[2][2], colArray[0][3],colArray[0][0],canvas);
+var Shape9 = new Button("rotating rect",36,230,160,35,colArray[2][2], colArray[2][2], colArray[0][3],colArray[0][0],canvas);
 
 
 
-objectSet.push(Shape1,Shape2,Shape3,Shape4,Shape5,Shape6,Shape7,Shape8);
+objectSet.push(Shape1,Shape2,Shape3,Shape4,Shape5,Shape6,Shape7,Shape8,Shape9);
 //brush width 
 //(text, x, y, w, h, width, stroke, fill, textC, over, canvas)
-var bw1 = new width_Button("XS", 10, 300, 30, 30,0, 3, colArray[0][3], colArray[0][3], colArray[0][5], colArray[0][0], canvas);
-var bw2 = new width_Button("S", 55, 300, 30, 30, 0,7, colArray[0][3], colArray[0][3], colArray[0][5], colArray[0][0], canvas);
-var bw3 = new width_Button("M", 100, 300, 30, 30,0, 12, colArray[0][3], colArray[0][3], colArray[0][5], colArray[0][0], canvas);
-var bw4 = new width_Button("L", 145, 300, 30, 30,0, 17, colArray[0][3], colArray[0][3], colArray[0][5], colArray[0][0], canvas);
-var bw5 = new width_Button("XL", 190, 300, 30, 30,0, 22, colArray[0][3], colArray[0][3], colArray[0][5], colArray[0][0], canvas);
+var bw1 = new width_Button("XS", 10, 335, 30, 30,0, 3, colArray[0][3], colArray[0][3], colArray[0][5], colArray[0][0], canvas);
+var bw2 = new width_Button("S", 55, 335, 30, 30, 0,7, colArray[0][3], colArray[0][3], colArray[0][5], colArray[0][0], canvas);
+var bw3 = new width_Button("M", 100, 335, 30, 30,0, 12, colArray[0][3], colArray[0][3], colArray[0][5], colArray[0][0], canvas);
+var bw4 = new width_Button("L", 145, 335, 30, 30,0, 17, colArray[0][3], colArray[0][3], colArray[0][5], colArray[0][0], canvas);
+var bw5 = new width_Button("XL", 190, 335, 30, 30,0, 22, colArray[0][3], colArray[0][3], colArray[0][5], colArray[0][0], canvas);
 objectSet.push(bw1, bw2, bw3, bw4, bw5);
 //lineWidth
-var lw1 = new width_Button("XS", 10, 400, 30, 30, 2, 0, colArray[0][3], colArray[0][3], colArray[0][5], colArray[0][0], canvas);
-var lw2 = new width_Button("S", 55, 400, 30, 30, 5, 0, colArray[0][3], colArray[0][3], colArray[0][5], colArray[0][0], canvas);
-var lw3 = new width_Button("M", 100, 400, 30, 30, 8, 0, colArray[0][3], colArray[0][3], colArray[0][5], colArray[0][0], canvas);
-var lw4 = new width_Button("L", 145, 400, 30, 30, 15, 0, colArray[0][3], colArray[0][3], colArray[0][5], colArray[0][0], canvas);
-var lw5 = new width_Button("XL", 190, 400, 30, 30, 25, 0, colArray[0][3], colArray[0][3], colArray[0][5], colArray[0][0], canvas);
+var lw1 = new width_Button("XS", 10, 435, 30, 30, 2, 0, colArray[0][3], colArray[0][3], colArray[0][5], colArray[0][0], canvas);
+var lw2 = new width_Button("S", 55, 435, 30, 30, 5, 0, colArray[0][3], colArray[0][3], colArray[0][5], colArray[0][0], canvas);
+var lw3 = new width_Button("M", 100, 435, 30, 30, 8, 0, colArray[0][3], colArray[0][3], colArray[0][5], colArray[0][0], canvas);
+var lw4 = new width_Button("L", 145, 435, 30, 30, 15, 0, colArray[0][3], colArray[0][3], colArray[0][5], colArray[0][0], canvas);
+var lw5 = new width_Button("XL", 190, 435, 30, 30, 25, 0, colArray[0][3], colArray[0][3], colArray[0][5], colArray[0][0], canvas);
 objectSet.push(lw1, lw2, lw3, lw4, lw5);
 
 

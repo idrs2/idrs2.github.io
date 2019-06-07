@@ -48,7 +48,9 @@ class controlobject {
             this.r = width_Button.selectedRadius;
             if(Button.selectedShape == "brush"){
                 var BOne = new Brush(this.xMouse, this.yMouse, this.r, Swatch.selectedColour);
+                
                 this.objectSet.push(BOne);
+                
             }
     }
         //calling rectBound
@@ -94,8 +96,16 @@ class controlobject {
             }
 
             else if(Button.selectedShape == "square"){
-                var One = new Square( this.xMouseStart, this.yMouseStart, this.dw, this.dh, Swatch.selectedColour);
-                this.objectSet.push(One);
+                console.log("Rotate");
+                var SOne = new Square( this.xMouseStart, this.yMouseStart, this.dw, this.dh, Swatch.selectedColour);
+                this.objectSet.push(SOne);
+            }
+
+            else if (Button.selectedShape == "rotating rectangle"){
+                console.log("Rotate");
+                var RROne = new Rotate(this.xMouse, this.yMouse, this.xMouseStart, this.yMouseStart, this.dw, this.dh, Swatch.selectedColour);
+                
+                this.objectSet.push(RROne);
             }
 
             
@@ -150,7 +160,7 @@ class controlobject {
 
         draw(){
             if(Button.selectedShape == "line" || Button.selectedShape == "rectangle" || Button.selectedShape == "ellipse" || Button.selectedShape == "circle"
-            || Button.selectedShape == "square"){
+            || Button.selectedShape == "square"|| Button.selectedShape == "rotating rect"){
                 this.drawRect(this.xMouseStart, this.yMouseStart, this.dw, this.dh);
             }
            
