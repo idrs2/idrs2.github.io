@@ -112,5 +112,5 @@ drawRect(x,y,w,h,col, toStroke){
 
 }
 Swatch.selected ="";
-Swatch.selectedColour ="";
+Swatch.selectedColour ="rgba(0,0,0,1)";
            

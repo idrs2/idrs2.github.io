@@ -80,11 +80,11 @@ class controlobject {
                 var COne = new Circle(this.xMouse, this.yMouse, this.xMouseStart, this.yMouseStart, Swatch.selectedColour);
                 this.objectSet.push(COne);
             }
-            else if(Button.selectedShape == "fivedot"){
-                var FDFour = new FiveDot(this.xMouse, this.yMouse, 80,colArray[1][7], colArray[1][6], colArray[1][5]);
-                this.objectSet.push(FDFour);
-            }
             
+            else if(Button.selectedShape == "line"){
+                var LOne = new Line(this.xMouse, this.yMouse, this.xMouseStart, this.yMouseStart, Swatch.selectedColour);
+                this.objectSet.push(LOne);
+            }
 
             
             //console.log(this.objectSet);
@@ -111,6 +111,7 @@ class controlobject {
         //function for background/boundary rectangle 
         //the variables will be called again in the main which will define the position of the background/boundary reectangle   
         this.drawBoundaryRect(this.x, this.y,this.w,this.h,colArray[0][0]);
+        this.drawRectangle(19,578,200,80,colArray[2][3]);
 
 
 
@@ -146,7 +147,7 @@ class controlobject {
 
         }
 
-      
+        
 
         drawCircle(x,y,r){
             ctx.beginPath();
@@ -163,6 +164,14 @@ class controlobject {
             ctx.lineWidth = 2;
             ctx.strokeStyle = Swatch.selectedColour;
             ctx.stroke();
+        }
+        //rectangle for colour buttons black and white
+        drawRectangle(x,y,w,h,col1){
+            ctx.beginPath();
+            ctx.rect(x,y,w,h);
+            ctx.lineWidth = 2;
+            ctx.fillStyle = col1;
+            ctx.fill();
         }
         //this function draws the BACKGROUND rectangle 
         drawBoundaryRect(x,y,w,h,col){
