@@ -12,6 +12,7 @@ class Button{
         this.fill = fill;
         this.textC= textC;
         this.text = text;
+        //over = the color when mousee hovers over button or when mouse clicks on it
         this.over =  over;
        
         
@@ -33,13 +34,13 @@ class Button{
     mMove(e){
         this.xMouse = e.offsetX;
         this.yMouse = e.offsetY;
-        //console.log("mouse move"); 
+        //boundary checks 
         this.bound = this.boundsCheck(this.xMouse, this.yMouse, this.x, this.y, this.w, this.h);
     }
 
     mClick(e){
         if(this.bound == true){
-            
+            //creating varables 
             Button.selected = this;
             Button.selectedShape =this.text;
            
@@ -49,8 +50,7 @@ class Button{
     
 
     mUp(e){
-        //console.log("mouse up event")
-        //create the rectangle
+        
         }
 
 
@@ -63,18 +63,17 @@ class Button{
     draw(){
         if(Button.selected == this){
             ctx.fillStyle = this.over;
-            
-            //ctx.fillStyle = "rgb(255,255,255)";
-            
+            //if button is selected colour will be white
+           
         }
         else if(this.bound){
-
             ctx.fillStyle = this.over;
-       
-            //ctx.fillStyle = "rgb(255,0,0)";
+            //if button hovers over button, color will be white 
+           
 
         }
         else{
+            //otherwse fill will stay the same 
             ctx.fillStyle = this.fill;
         }
         
@@ -82,7 +81,7 @@ class Button{
         ctx.rect(this.x,this.y,this.w,this.h);
         ctx.strokeStyle = this.stroke;
         //linewidth of the shape button
-        ctx.lineWidth = 6;
+        ctx.lineWidth = 4;
         ctx.fill();
         ctx.stroke();
         
@@ -109,5 +108,5 @@ class Button{
 
 
 }
-Button.selected ="";
-Button.selectedShape ="";
+Button.selected ="";//universal
+Button.selectedShape ="";//universal

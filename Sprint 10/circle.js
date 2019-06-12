@@ -5,6 +5,7 @@ class Circle{
         this.radiusX = Math.abs( (xM - xS)/2 ); //Math.abs is to make the values always positive
         this.radiusY = Math.abs( (yM - yS)/2 );
         this.r = 0;
+        //defiying the radius of the circle when it is drawn  
         if(this.radiusX <this.radiusY){
             this.r = this.radiusX;
         }
@@ -16,7 +17,7 @@ class Circle{
     }
 
     update(){
-        
+        //calling draw function 
         this.draw();
     }
 

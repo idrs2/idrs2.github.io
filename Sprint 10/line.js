@@ -5,6 +5,7 @@ class Line{
         this.yS = yS;
         this.xM = xM;
         this.yM = yM;
+        //variable for the different line widths 
         this.lw = lw;
         this.fill = c1;
     }
@@ -17,6 +18,7 @@ class Line{
         
         ctx.strokeStyle = this.fill;
         ctx.lineWidth = this.lw;
+        //makes the shape of the  line roundish 
         ctx.lineCap = "round";
         ctx.beginPath();
         ctx.moveTo(this.xS, this.yS);

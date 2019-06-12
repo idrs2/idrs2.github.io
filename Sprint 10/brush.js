@@ -7,7 +7,7 @@ class Brush{
     }
 
     update(){
-        
+        //sends it to the draw function  
         this.draw();
     }
 

@@ -10,6 +10,7 @@ class Rectangle{
     }
 
     update(){
+        //calls the draw function 
         this.draw();
     }
     draw(){

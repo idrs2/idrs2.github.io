@@ -7,55 +7,77 @@
     <title>Isha Website</title>
     <style type="text/css">
     body{
-        background-color: #f1ccda;
+        background-color: rgb(227,228,219);
     }
+    header {
+        height:100px;
+	    width:795px;
+	    border-bottom:solid 1px #000;
+	}
     .wrapper{
         width:70%;
         margin:auto;
         padding: 5px;
         padding-top: 40px; 
-        background-color: rgb(144, 156, 156);
+        background-color: rgb(235,205,205);
                 }
     h1{
         text-align: center;
-        border-bottom: 1px solid #ffffff;
-        border-top: 1px solid #ffffff;
+        border-top: 1px solid #000000;
+        padding-top:40px;
+        
         }
-
     h2{
         text-align: center;
+       
     }
-
     h3{
         text-align: center;
+        font-size:170%;
+    }
+    h4{
+        text-align: center;
+        font-size:140%;
+    }
+    h5{
+        font-size:140%;
+
+
     }
     p{
         text-align: center;
     }
+    .end{
+        text-align: left;
+        
+    }
+    .reflection{
+        text-align: center;;
+    }
     .imgSizer{
         width: 700px;
         margin-bottom: 20px;
-        padding-left: 85px;
+        padding-left: 50px;
         
     }
     .vid_div{
         margin-bottom: 30px;
-        padding-left: 135px;
+        padding-left: 100px;
     }
-
-    
-    
+   
 </style>
 
 </head>
 <body>
         <div class="wrapper">
-<h1> Sprint 1 </h1>
-<p>Sprint 1 - draw a rectangle and create a boundary </p>
-<h3>Link to sprint 1 - <a href = "Sprint1-BOUNDARY/internal.html">Sprint 1 </a> </h3>
+        <header><h1>Isha's Website Planning - AS 91906 & AS 91907 </h1></header>
+<h3>Sprint 1 </h3>
+<p>for Sprint One, my aim was to be able to draw a rectangle on a canvas that has a boudary set on it so that 
+    the rectangle can't get drawn outside the boundary </p>
+<h4>Link to sprint 1 - <a href = "Sprint1-BOUNDARY/internal.html">Sprint 1 </a> </h4>
 
 <h2>My Trello plan </h2>
-<div><img class="imgSizer" src="Sprint1-BOUNDARY/Trello.JPG"></div>
+<div><img class="imgSizer" src="Sprint1-BOUNDARY/trello.JPG"></div>
 
 <h2> Testing </h2>
 <p> This first test uses console logging to test if my boundary function is working properly </p>
@@ -75,20 +97,24 @@
 </video>
 </div>
 
+
+
 <!---- Sprint Two starts down here-->   
         
-<h1> Sprint 2 </h1>
+<h1>Sprint 2 </h1>
 
-<p>For Sprint 2, my aim is to create two buttons that can give me a particular shape to draw on the canvas. I have created another shape whcih is the ellipse
-therefore I now have two shapes that I can switch between</p>
-<h3>Link to Sprint 2 - <a href = "Sprint2/internal.html">Sprint 2</a></h3>
+<p>My aim for Sprint 2 is to have two options of shapes to be able to draw from. Therefore I have chosen to have the rectangle
+    from the previous sprint and to make a new shape of ellipse. Also with the use of buttons, the user will be able 
+to switch between the two shapes </p>
+<h4>Link to Sprint 2 - <a href = "Sprint2/internal.html">Sprint 2</a></h4>
 
 
 <h2>My Trello plan </h2>
-<div><img class="imgSizer" src="Sprint2/Buttons_ellipse.JPG"></div>
+<div><img class="imgSizer" src="Sprint2/trello.JPG"></div>
+<div><img class="imgSizer" src="Sprint2/description.JPG"></div>
 
 <h2> Testing </h2>
-<p>This test shows the drawing of thee shapes that occur within the boundary of the canvas </p>
+<p>This test shows the drawing of the shapes that occur within the boundary of the canvas </p>
 <div class="vid_div"><video width="600"  controls>
 <source src="Sprint2/testing.mp4" type="video/mp4">
 </video>
@@ -100,11 +126,11 @@ therefore I now have two shapes that I can switch between</p>
 
 <p>For Sprint 3, my aim is to create colour buttons that can be used to create rectangle and ellipse with different colours
     Need to change one of the colours from the colArray as the pink has been repeated. </p>
-<h3>Link to Sprint 3 - <a href = "Sprint3/internal.html">Sprint 3</a></h3>
+<h4>Link to Sprint 3 - <a href = "Sprint3/internal.html">Sprint 3</a></h4>
 
 
 <h2>My Trello plan </h2>
-<div><img class="imgSizer" src="Sprint3/Trello.JPG"></div>
+<div><img class="imgSizer" src="Sprint3/trello3.JPG"></div>
 <h3>colArray - 1</h3>
 <div><img class="imgSizer" src="Sprint3/colarray1.JPG"></div>
 <h3>colArray - 0.65</h3>
@@ -126,132 +152,246 @@ therefore I now have two shapes that I can switch between</p>
 <h1> Sprint 4 </h1>
 
 <p>For Sprint 4, my aim is to create another shape, which is a circle and connect it with the buttons </p>
-<h3>Link to Sprint 4 - <a href = "Sprint 4/internal.html">Sprint 4</a></h3>
+<h4>Link to Sprint 4 - <a href = "Sprint 4/internal.html">Sprint 4</a></h4>
 
 
 <h2>My Trello plan </h2>
-<div><img class="imgSizer" src=""></div>
+<div><img class="imgSizer" src="Sprint 4/trello4.JPG"></div>
 
 
 <h2> Testing </h2>
-<p>This test shows the two shapes changing between each other with changing the colours </p>
+<p>This test shows how the circle is only able to be drawn on the canvas where the boundary is set. However there is 
+    no default colour being set, therefroe this will be something I do further on in the sprints. </p>
 <div class="vid_div"><video width="600"  controls>
-<source src="" type="video/mp4">
+<source src="Sprint 4/circle.mp4" type="video/mp4">
 </video>
 </div>
 
+<h5 class = "reflection"> Reflection </h5>
+<p> In this sprint, there were a few issues that did arise at first. I had previously made an ellipse in the secound sprint,
+    which meant that the circle would be a bit easier as the ellipse and circle had quite similar 
+    code. However I found it quite difficult to figure out the radius. With some help from the teacher i realsied that 
+    it wsa best to work out the radius from the guided rectangle that we make. After solving this issue, it made a lot
+    of sense and helped me to figure out other code in the future. With a few small errors, I had learnt how to tackle them 
+    and work them out myself which was very beneficial.  
+
+</p>
 <!---- Sprint Five starts down here--> 
 
 <h1> Sprint 5 </h1>
 
-<p>For Sprint 5, my aim is to create undo and reset buttons so that users are able to undo and clear their work </p>
-<h3>Link to Sprint 5 - <a href = "Sprint 5/internal.html">Sprint 5</a></h3>
+<p>For Sprint 5, my aim is to include undo and reset buttons so that the user is able to undo and/or clear their drawing 
+     </p>
+<h4>Link to Sprint 5 - <a href = "Sprint 5/internal.html">Sprint 5</a></h4>
 
 
 <h2>My Trello plan </h2>
-<div><img class="imgSizer" src=""></div>
+<div><img class="imgSizer" src="Sprint 5/trello5.JPG"></div>
 
 
 <h2> Testing </h2>
-<p>This test shows the two shapes changing between each other with changing the colours </p>
+<p>This testing shows how the undo and reset buttons work. They do not work if you click on the canvas which 
+    is what is expected. However with the circle the guided shape as a small circle with a rectngle around it - this needs 
+to be changed to just a guided rectangle. It can also be seen with the testing that the ellipse doesn't have a 
+guided shape or outline when the user is drawing it which will be changed further on. </p>
 <div class="vid_div"><video width="600"  controls>
-<source src="" type="video/mp4">
+<source src="Sprint 5/sprint5.mp4" type="video/mp4">
 </video>
 </div>
+<h5 class = "reflection">Reflection</h5>
+<p> This sprint was quite short and straightforward, howevver there were a few errors that arose. Firstly 
+    the shape would only undo or reset if the mouse/user clicked in the boundary/canvas. After some time, I had realised 
+    with a bit of help that my undo and reset button were in the condition of  - if in rect bound and mouse is down. 
+    this measn it would only work if the mouse was down in the boundary. 
+</p>
 
 <!---- Sprint Six starts down here--> 
 
 <h1> Sprint 6 </h1>
 
-<p>For Sprint 6, my aim is to create undo and reset buttons so that users are able to undo and clear their work </p>
-<h3>Link to Sprint 6 - <a href = "Sprint 6/internal.html">Sprint 6</a></h3>
+<p>For Sprint 6, I am wanting to achieve to draw a line, which can have different width sizes - this will be done further on
+    the sprints  </p>
+<h4>Link to Sprint 6 - <a href = "Sprint 6/internal.html">Sprint 6</a></h4>
 
 
 <h2>My Trello plan </h2>
-<div><img class="imgSizer" src=""></div>
+<div><img class="imgSizer" src="Sprint 6/trello6.JPG"></div>
 
 
 <h2> Testing </h2>
-<p>This test shows the two shapes changing between each other with changing the colours </p>
+<p>This test shows how the line does not go out of boundary and the default colour has been set to black for all 
+    shapes which makes it more user - friendly.  </p>
 <div class="vid_div"><video width="600"  controls>
-<source src="" type="video/mp4">
+<source src="Sprint 6/sprint6.mp4" type="video/mp4">
 </video>
 </div>
+<h5 class = "reflection">Reflection</h5>
+<p> In this sprint, there were not many errors that popped up. But I had figured that it was easier if there was a
+    default colour put in so that users wouldn't have to change thee colour before using it. i also had a vision that it 
+    would be interesting for users to have different line sizes, therefore in the next few sprints, that was something I 
+    wanted to achieve. 
+</p>
 
 <!---- Sprint Seven starts down here--> 
 
 <h1> Sprint 7 </h1>
 
-<p>For Sprint 7, my aim is to create undo and reset buttons so that users are able to undo and clear their work </p>
-<h3>Link to Sprint 7- <a href = "Sprint 7/internal.html">Sprint 7</a></h3>
+<p>For Sprint 7, my aim is to create a brush that can have different sizes. </p>
+<h4>Link to Sprint 7- <a href = "Sprint 7/internal.html">Sprint 7</a></h4>
 
 
 <h2>My Trello plan </h2>
-<div><img class="imgSizer" src=""></div>
+<div><img class="imgSizer" src="Sprint 7/trello7.JPG"></div>
 
 
 <h2> Testing </h2>
-<p>This test shows the two shapes changing between each other with changing the colours </p>
+<p>this test shows that the all the brush sizes work. However there are a few fixible things that have been 
+    fixed in the last sprint and some that aren't fixible. The fixible was the brush going out of the bounds and also 
+that the sizes large and extra large were uite similar which can be changed. The non- fixible thing was that if 
+the user tries to move the brush to quickly it breaks up which is essentially because the computer is unable to pick up 
+the speed  </p>
 <div class="vid_div"><video width="600"  controls>
-<source src="" type="video/mp4">
+<source src="Sprint 7/sprint7.mp4" type="video/mp4">
 </video>
 </div>
+<h5 class = "reflection">Reflection</h5>
+<p>In this sprint, I had made a brush. However there were a few errors that occured. Some of these were fixed later on
+    in the sprints. One of them was that it wasn't drawing on the canvas, however i fixed that by getting my variables right
+which made a lot more sense. But the brush would always go out of bounds which I ended up solving in my last sprint. </p>
 
 <!---- Sprint Eight starts down here--> 
 
 <h1> Sprint 8 </h1>
 
-<p>For Sprint 7, my aim is to create undo and reset buttons so that users are able to undo and clear their work </p>
-<h3>Link to Sprint 7- <a href = "Sprint 8/internal.html">Sprint 8</a></h3>
+<p>For Sprint 8, my aim is to create different line widths for the line as mentioned above. </p>
+<h4>Link to Sprint 8- <a href = "Sprint 8/internal.html">Sprint 8</a></h4>
 
 
 <h2>My Trello plan </h2>
-<div><img class="imgSizer" src=""></div>
-
+<div><img class="imgSizer" src="Sprint 8/trello8.JPG"></div>
 
 <h2> Testing </h2>
-<p>This test shows the two shapes changing between each other with changing the colours </p>
+<p>this test shows that for the line width there is a default colour being set which is black and there is also a default
+    size. For the future, I might reduce the sizes to three - S,M,L to make it simpiler. The line is working perfectly.</p>
 <div class="vid_div"><video width="600"  controls>
-<source src="" type="video/mp4">
+<source src="Sprint 8/sprint8.mp4" type="video/mp4">
 </video>
 </div>
+<h5 class = reflection>Reflection</h5>
+<p> in this sprint, I tried to make different line sizes as discussed above. I had figured oout a few options to do this 
+    which was by creating a whole new button file for the line width. However the thought of joining the brush and line sizes together 
+    made more sense. The same process followed this but instead of having the radius it was the width. I followed the smae process 
+    as making the different brush sizes and was successful at the end of it.  
+</p>
 <!---- Sprint Nine starts down here--> 
 
 <h1> Sprint 9 </h1>
 
-<p>For Sprint 7, my aim is to create undo and reset buttons so that users are able to undo and clear their work </p>
-<h3>Link to Sprint 7- <a href = "Sprint 9/internal.html">Sprint 9</a></h3>
+<p> For Sprint 9, my is to create another shape so that the user has different varities to choose from. Therefore in this 
+    sprint, I will create a square</p>
+<h4>Link to Sprint 9- <a href = "Sprint 9/internal.html">Sprint 9</a></h4>
 
 
 <h2>My Trello plan </h2>
-<div><img class="imgSizer" src=""></div>
+<div><img class="imgSizer" src="Sprint 9/trello9.JPG"></div>
 
 
 <h2> Testing </h2>
-<p>This test shows the two shapes changing between each other with changing the colours </p>
+<p>This test shows that the sqare has a default colour of black, which is expected. Howeever the square that is drawn seems 
+    to go out of bounds at some point which can be fixed later on.
+</p>
 <div class="vid_div"><video width="600"  controls>
-<source src="" type="video/mp4">
+<source src="Sprint 9/sprint9.mp4" type="video/mp4">
 </video>
 </div>
-
+<h5 class = "reflection">Reflection</h5>
+<p>this sprint included drawing a square. I found this quite hard even though I would have thought it was quite similar to 
+    the coding to the rectangle. When I finally got the code for the square, there were issues that aorse from it. 
+    Firstly - the square would go out of bounds (which eventualy got fixed at the last sprint),  the square would'nt draw
+    where the user wants it to which created an issue. However after getting the variables right, it started to work 
+</p>
 <!---- Sprint Ten starts down here--> 
 
 <h1> Sprint 10 </h1>
 
-<p>For Sprint 7, my aim is to create undo and reset buttons so that users are able to undo and clear their work </p>
-<h3>Link to Sprint 7- <a href = "Sprint 10/internal.html">Sprint 10</a></h3>
+<p>For Sprint 10, I want to try something different and use animation, therefore my aim is to create a rotating rectangle </p>
+<h4>Link to Sprint 10- <a href = "Sprint 10/internal.html">Sprint 10</a></h4>
 
 
 <h2>My Trello plan </h2>
-<div><img class="imgSizer" src=""></div>
+<div><img class="imgSizer" src="Sprint 10/trello10.JPG"></div>
 
 
 <h2> Testing </h2>
-<p>This test shows the two shapes changing between each other with changing the colours </p>
+<p>this test is for the testing of the rotating rect and also everything else as it is my last sprint. 
+    As you can tell the brush isn't going out of bounds and that is the same with the square. the rotating rectangle 
+also doesn't go out of the boundary. I have also kept the line widths to S,M,L and the brush sizes for large and 
+extra large have gone larger s that it is easier to tell between the two.  </p>
 <div class="vid_div"><video width="600"  controls>
-<source src="" type="video/mp4">
+<source src="Sprint 10/sprint10.mp4" type="video/mp4">
 </video>
 </div>
+<h5 class = "reflection">Reflection</h5>
+<p> For my last sprint I created a rotating rect. The same issue arose as the brush and square whre it would go out of bounds.
+    Therefore, clip() was added where it essentially clips of the part of the shape or brush stroke that is going out 
+    bounds. This solved all the issues for that which meant that it all worked perfetly well. 
+</p>
+<h1>Relevant Implications </h1>
+
+<h5>Future Proofing </h5>
+<p class = "end">  Program is designed so new features can be added easily and old ones removed
+<br> Adressed   - in the way the program has been designed. Project elements(
+    colours, buttons, shapes) have all been programmed as objects,  means each object is a self-contained, modular piece of code, 
+    that takes a defined set of parameters to work,(may take basic mouse data and color), all objects are built to a similar 
+    structure and compulsory contain an update function which means they can appear on the interface using the update call, 
+    management of most of the objects happens in a central place (control object), the idea is that an experienced programmer 
+    would easily be able to remove elements or add new features, comments are also precise and informative.  
+ <p>
+
+<p class = "end"> Functionality - does the program work well? Is it free of bugs? loads quickly? works on different browsers? 
+        have we addressed this? Program is pure javascript, has no graphics, so loads very quicky, 
+        I have tested by using a live web server to store my versions and have observed loading performance <br>
+        - To ensure the program works well I have systematically tested it, tested user interactions
+         (position of clicking and direction of dragging. This has included careful checks around boundaries. 
+         The use of the Math.abs function was discovered after testing failures drawing circular shapes(because 
+         these objects where being given negative radius values).<br>
+         Any new components were tested prior to being added to the main program. At various stages in sprints, 
+         console logging was used to analyze boundary test functions, and locate problems when bugs appeared.
+    </p>
+
+<h5>Examples of Trialing and Making Decisions</h5>
+<p class ="end"> Can you find examples of exploring different options and making a decision about which is the best solution?
+        <br> - Trying to figure out doing buttons for different line widths so that the user is able to choose what size the line will be. 
+        <br> - Trying to created the guided shape(each shape has their own guided shape)
+        <br> - what the best way was to do the colour buttons (which was by loops)
+
+</p>
+
+<p class = "end">Effectively using information from testing and trialing to 
+    improve the functionaility of the outcome.
+    <br> - Interface design trialing color themes 
+    <br> - Different line width sizes 
+    <br> - Changing the transparency of the colors - look too similar 
+    <br> - figuring out sizing for the brush sizes(don't want them too similar)
+    <br> - changing the colour scheme (which ones go together)
+    
+    </p>
+
+<p class = "end">How did your working process(planning, testing, trialing)lead to the development of a 
+    high-quality digital outcome? 
+    <br> How was the Agile process helpful?
+    <br>- Allowed planning and development to happen together
+    <br>- Created repeated cycles of plan - develop - test.
+    <br> - after two or three sprints I got a much clearer idea 
+            of what I could achieve and my aims became much more focused and realistic 
+    <br> - 
+
+    </p>
+
+
+    
+   
+
 
 
 

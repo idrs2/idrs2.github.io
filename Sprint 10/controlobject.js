@@ -16,6 +16,7 @@ class controlobject {
         this.y = y;
         this.w = w;
         this.h = h;
+        //the radius
         this.r = 0;
         //variables define the width and height for the rectangle that is drawn on the screen(dragging rectangle)
         this.dw = 0;
@@ -45,28 +46,31 @@ class controlobject {
         //for the boundary 
         this.rectBound = this.boundsCheck (this.xMouse, this.yMouse, this.x, this.y, this.w, this.h);
         if(this.mouseDown == true && this.rectBound == true){
+            //defying the variable of radius for the different brush sizes 
             this.r = width_Button.selectedRadius;
             if(Button.selectedShape == "brush"){
+                console.log("brush");
+                //brush will be drawn or used 
                 var BOne = new Brush(this.xMouse, this.yMouse, this.r, Swatch.selectedColour);
-                
                 this.objectSet.push(BOne);
                 
             }
     }
-        //calling rectBound
-        //console.log(this.rectBound);
-        //console.log("mouse move event") 
+        
         }
 
-        //colarray here will change colour of the dragging rectangle 
+    
         mUp(e){
-
+            //undo button 
             if(Button.selectedShape == "undo"){
                 this.objectSet.pop();
+                console.log("undo")
                 Button.selectedShape ="";
             }
+            //clear button
             else if(Button.selectedShape == "clear"){
                 this.objectSet = [];
+                console.log("reset button");
                 Button.selectedShape = "";
             }
         
@@ -74,37 +78,43 @@ class controlobject {
  
         //establishing the conditions for the dragging ellipse
         if(this.mouseDown == true && this.rectBound == true){
+            //defying the variable for the different line widths/ sizes
             this.lw = width_Button.selectedLineWidth;
             //linking the shape buttons with drawing the shapes 
             if(Button.selectedShape == "rectangle"){
                 var ROne = new Rectangle(this.xMouseStart, this.yMouseStart, this.dw, this.dh, Swatch.selectedColour);
+                console.log("rectangle");
                 this.objectSet.push(ROne);
             }
             else if(Button.selectedShape == "ellipse"){
                 var EOne = new Ellipse(this.xMouseStart, this.yMouseStart, this.xMouse, this.yMouse, Swatch.selectedColour);
+                console.log("Ellipse");
                 this.objectSet.push(EOne);
             }
             else if(Button.selectedShape == "circle"){
                 console.log("in circle");
                 var COne = new Circle(this.xMouse, this.yMouse, this.xMouseStart, this.yMouseStart, Swatch.selectedColour);
+                console.log("circle");
                 this.objectSet.push(COne);
             }
            
            else if(Button.selectedShape == "line"){
                 var LOne = new Line(this.xMouse, this.yMouse, this.xMouseStart, this.yMouseStart,this.lw, Swatch.selectedColour);
+                console.log("line")
                 this.objectSet.push(LOne);
             }
 
             else if(Button.selectedShape == "square"){
                 console.log("Rotate");
                 var SOne = new Square( this.xMouseStart, this.yMouseStart, this.dw, this.dh, Swatch.selectedColour);
+                console.log("square")
                 this.objectSet.push(SOne);
             }
 
-            else if (Button.selectedShape == "rotating rectangle"){
-                console.log("Rotate");
+            else if (Button.selectedShape == "rotating rect"){
+                console.log("rotate");
                 var RROne = new Rotate(this.xMouse, this.yMouse, this.xMouseStart, this.yMouseStart, this.dw, this.dh, Swatch.selectedColour);
-                
+                console.log("rotating rectangle");
                 this.objectSet.push(RROne);
             }
 
@@ -125,25 +135,27 @@ class controlobject {
         
         
         
-        //console.log("mouse up event")
-        //create the rectangle
+        
         }
 
         update(){
+        ctx.save();
+        ctx.beginPath();
         //function for background/boundary rectangle 
         //the variables will be called again in the main which will define the position of the background/boundary reectangle   
         this.drawBoundaryRect(this.x, this.y,this.w,this.h);
-        //background rectangle for the colour buttons black and white 
-        this.drawRectangle(19,578,200,80,colArray[2][3]);
+        //helps so that the shapes and brush doesnt go out of boundary
+        ctx.clip();
         
-
+        
+        
 
 
             
            for (var i=0; i<this.objectSet.length; i++){
                 this.objectSet[i].update();
             }
-          
+        ctx.restore();
          //this is for the dragging rectangle    
         this.dw = this.xMouse - this.xMouseStart;
         this.dh = this.yMouse - this.yMouseStart;
@@ -159,32 +171,17 @@ class controlobject {
         
 
         draw(){
+            //for the guided rectangle that is drawn 
             if(Button.selectedShape == "line" || Button.selectedShape == "rectangle" || Button.selectedShape == "ellipse" || Button.selectedShape == "circle"
             || Button.selectedShape == "square"|| Button.selectedShape == "rotating rect"){
                 this.drawRect(this.xMouseStart, this.yMouseStart, this.dw, this.dh);
             }
            
-            //for the dragging guided rectangle
-            ;
-            
-
-            
-       
-    
-           
-
-        }
+        
+    }
 
         
-        //circle being dragged onto canvas 
-        drawCircle(x,y,r){
-            ctx.beginPath();
-            ctx.arc(x,y,r,0,2*Math.PI);
-            ctx.lineWidth = 1;
-            ctx.strokeStyle = Swatch.selectedColour;
-            ctx.stroke();
-        }
-
+        
     
     
         //this function draw the rectangle that is DRAWN 
@@ -195,21 +192,14 @@ class controlobject {
             ctx.strokeStyle = Swatch.selectedColour;
             ctx.stroke();
         }
-        //rectangle for colour buttons black and white
-        drawRectangle(x,y,w,h,col1){
-            ctx.beginPath();
-            ctx.rect(x,y,w,h);
-            ctx.lineWidth = 2;
-            ctx.fillStyle = col1;
-            ctx.fill();
-        }
+        
         //this function draws the BACKGROUND rectangle 
         drawBoundaryRect(x,y,w,h,col){
             ctx.beginPath();
             ctx.rect(x,y,w,h);
             ctx.lineWidth = 12;
             ctx.fillStyle = "rgb(255,255,255)"; 
-            ctx.strokeStyle = colArray[0][4]
+            ctx.strokeStyle = colArray[0][3]
             ctx.stroke();
             ctx.fill();
         }
@@ -223,10 +213,4 @@ class controlobject {
             }
 
             
-
-       
-        
-
-
-
-}
+        }

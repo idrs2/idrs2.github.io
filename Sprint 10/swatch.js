@@ -8,6 +8,7 @@ class Swatch{
         this.h = h;
         this.stroke =stroke;
         this.swatch = swatch;
+        //over = colour when mouse hovers over the colour or when mouse clicks on it 
         this.over =  over;
         
         
@@ -29,7 +30,7 @@ class Swatch{
     mMove(e){
         this.xMouse = e.offsetX;
         this.yMouse = e.offsetY;
-        
+        //boundary check
         this.bound = this.boundsCheck(this.xMouse, this.yMouse, this.x, this.y, this.w, this.h);
     }
 
@@ -96,7 +97,7 @@ drawRect(x,y,w,h,col, toStroke){
     }
     ctx.restore();
     }
-    
+    //boundary check
     boundsCheck(xM, yM, x, y, w, h){ 
         if(xM > x && xM < x + w && yM > y && yM < y+ h){
             return true;
@@ -111,6 +112,6 @@ drawRect(x,y,w,h,col, toStroke){
 
 
 }
-Swatch.selected ="";
-Swatch.selectedColour ="rgba(0,0,0,1)";
+Swatch.selected ="";//universal
+Swatch.selectedColour ="rgba(0,0,0,1)";//universal - default colour is set for the colours 
            
