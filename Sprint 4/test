@@ -1,87 +1,204 @@
-class ControlObjectSquare{
-    constructor(canvas){
+<h1> Sprint 1 </h1>
+<p>Sprint 1 - draw a rectangle and create a boundary </p>
+<h3>Link to sprint 1 - <a href = "Sprint1-BOUNDARY/internal.html">Sprint 1 </a> </h3>
 
-        this.xMouse = 0;
-        this.yMouse = 0;
-        this.xMouseStart = 0;
-        this.yMouseStart = 0;
-        this.mouseDown = false;
-        this.sh = 0;
-        this.sw = 0;
+<h2>My Trello plan </h2>
+<div><img class="imgSizer" src="Sprint1-BOUNDARY/Trello.JPG"></div>
 
-        this.w = 0;
-        this.h = 0;
+<h2> Testing </h2>
+<p> This first test uses console logging to test if my boundary function is working properly </p>
+<div class="vid_div"><video width="600"  controls>
+<source src="Sprint1-BOUNDARY/true_false2.mp4" type="video/mp4">
+</video>
+</div>
+<p> This secound test shows how the mouse is able to drag the rectangle out and at different co-ordinaes. </p>
+<div class="vid_div"><video width="600"  controls>
+<source src="Sprint1-BOUNDARY/drawing.mp4" type="video/mp4">
+</video>
+</div>
+<p> This third test shows how the boundary works when the rectangle is dragged outside the boundary 
+</p>
+<div class="vid_div"><video width="600"  controls>
+<source src="Sprint1-BOUNDARY/boundaryrect.mp4" type="video/mp4">
+</video>
+</div>
 
+<!---- Sprint Two starts down here-->   
+        
+<h1> Sprint 2 </h1>
 
-        this.element = canvas;
-        this.element.addEventListener('mousedown', this.mDown.bind(this));
-        this.element.addEventListener('mousemove', this.mMove.bind(this));
-        this.element.addEventListener('mouseup', this.mUp.bind(this));
-
-    }
-
-    mDown(e){
-        this.xMouseStart= e.offsetX;
-        this.yMouseStart = e.offsetY;
-        this.mouseDown = true;
-
-
-
-    }
-
-    mMove(e){
-        this.xMouse= e.offsetX;
-        this.yMouse = e.offsetY;
-    }
-
-    mUp(e){
-        this.mouseDown = false;
-
-    }
-
-    update(){
-        this.w = this.xMouse - this.xMouseStart;
-        this.h = this.yMouse - this.yMouseStart;
-        if(Math.abs(this.w) < Math.abs(this.h)){
-            this.sw = this.w;
-            this.sh = this.w;
-
-            if( (this.w < 0 && this.h > 0) || (this.w > 0 && this.h < 0)){
-                this.sh = -this.w ;
-            }
-            
-        }else{
-            this.sh = this.h;
-            this.sw = this.h;
-
-            if( (this.w < 0 && this.h > 0) || (this.w > 0 && this.h < 0)){
-                this.sw = -this.h ;
-            }
-        }
+<p>For Sprint 2, my aim is to create two buttons that can give me a particular shape to draw on the canvas. I have created another shape whcih is the ellipse
+therefore I now have two shapes that I can switch between</p>
+<h3>Link to Sprint 2 - <a href = "Sprint2/internal.html">Sprint 2</a></h3>
 
 
-        if(this.mouseDown){
-            console.log("mouse is down");
-            this.draw();
-        }
+<h2>My Trello plan </h2>
+<div><img class="imgSizer" src="Sprint2/Buttons_ellipse.JPG"></div>
+
+<h2> Testing </h2>
+<p>This test shows the drawing of thee shapes that occur within the boundary of the canvas </p>
+<div class="vid_div"><video width="600"  controls>
+<source src="Sprint2/testing.mp4" type="video/mp4">
+</video>
+</div>
+
+<!---- Sprint Three starts down here--> 
+
+<h1> Sprint 3 </h1>
+
+<p>For Sprint 3, my aim is to create colour buttons that can be used to create rectangle and ellipse with different colours
+    Need to change one of the colours from the colArray as the pink has been repeated. </p>
+<h3>Link to Sprint 3 - <a href = "Sprint3/internal.html">Sprint 3</a></h3>
 
 
-    }
-
-    draw(){
-        this.drawRect(this.xMouseStart, this.yMouseStart, this.w, this.h, "rgb(200, 230, 20)");
-        this.drawRect(this.xMouseStart, this.yMouseStart, this.sw, this.sh, "rgb(20, 230, 200)");
-
-
-    }
-
-    drawRect(x,y, w,h,f){
-        ctx.beginPath();
-        ctx.rect(x, y, w,h);
-        ctx.lineWidth = 1;
-        ctx.strokeStyle = f;
-        ctx.stroke();
-    }
+<h2>My Trello plan </h2>
+<div><img class="imgSizer" src="Sprint3/Trello.JPG"></div>
+<h3>colArray - 1</h3>
+<div><img class="imgSizer" src="Sprint3/colarray1.JPG"></div>
+<h3>colArray - 0.65</h3>
+<div><img class="imgSizer" src="Sprint3/colArray0.65.JPG"></div>
+<h3>colArray - 0.3</h3>
+<div><img class="imgSizer" src="Sprint3/colArray0.3.JPG"></div>
 
 
-}
+<h2> Testing </h2>
+<p>This test shows the two shapes changing between each other with changing the colours </p>
+<div class="vid_div"><video width="600"  controls>
+<source src="Sprint3/Recording.mp4" type="video/mp4">
+</video>
+</div>
+
+
+<!---- Sprint Four starts down here--> 
+
+<h1> Sprint 4 </h1>
+
+<p>For Sprint 4, my aim is to create another shape, which is a circle and connect it with the buttons </p>
+<h3>Link to Sprint 4 - <a href = "Sprint 4/internal.html">Sprint 4</a></h3>
+
+
+<h2>My Trello plan </h2>
+<div><img class="imgSizer" src=""></div>
+
+
+<h2> Testing </h2>
+<p>This test shows the two shapes changing between each other with changing the colours </p>
+<div class="vid_div"><video width="600"  controls>
+<source src="" type="video/mp4">
+</video>
+</div>
+
+<!---- Sprint Five starts down here--> 
+
+<h1> Sprint 5 </h1>
+
+<p>For Sprint 5, my aim is to create undo and reset buttons so that users are able to undo and clear their work </p>
+<h3>Link to Sprint 5 - <a href = "Sprint 5/internal.html">Sprint 5</a></h3>
+
+
+<h2>My Trello plan </h2>
+<div><img class="imgSizer" src=""></div>
+
+
+<h2> Testing </h2>
+<p>This test shows the two shapes changing between each other with changing the colours </p>
+<div class="vid_div"><video width="600"  controls>
+<source src="" type="video/mp4">
+</video>
+</div>
+
+<!---- Sprint Six starts down here--> 
+
+<h1> Sprint 6 </h1>
+
+<p>For Sprint 6, my aim is to create undo and reset buttons so that users are able to undo and clear their work </p>
+<h3>Link to Sprint 6 - <a href = "Sprint 6/internal.html">Sprint 6</a></h3>
+
+
+<h2>My Trello plan </h2>
+<div><img class="imgSizer" src=""></div>
+
+
+<h2> Testing </h2>
+<p>This test shows the two shapes changing between each other with changing the colours </p>
+<div class="vid_div"><video width="600"  controls>
+<source src="" type="video/mp4">
+</video>
+</div>
+
+<!---- Sprint Seven starts down here--> 
+
+<h1> Sprint 7 </h1>
+
+<p>For Sprint 7, my aim is to create undo and reset buttons so that users are able to undo and clear their work </p>
+<h3>Link to Sprint 7- <a href = "Sprint 7/internal.html">Sprint 7</a></h3>
+
+
+<h2>My Trello plan </h2>
+<div><img class="imgSizer" src=""></div>
+
+
+<h2> Testing </h2>
+<p>This test shows the two shapes changing between each other with changing the colours </p>
+<div class="vid_div"><video width="600"  controls>
+<source src="" type="video/mp4">
+</video>
+</div>
+
+<!---- Sprint Eight starts down here--> 
+
+<h1> Sprint 8 </h1>
+
+<p>For Sprint 7, my aim is to create undo and reset buttons so that users are able to undo and clear their work </p>
+<h3>Link to Sprint 8- <a href = "Sprint 8/internal.html">Sprint 8</a></h3>
+
+
+<h2>My Trello plan </h2>
+<div><img class="imgSizer" src=""></div>
+
+
+<h2> Testing </h2>
+<p>This test shows the two shapes changing between each other with changing the colours </p>
+<div class="vid_div"><video width="600"  controls>
+<source src="" type="video/mp4">
+</video>
+</div>
+<!---- Sprint Nine starts down here--> 
+
+<h1> Sprint 9 </h1>
+
+<p>For Sprint 7, my aim is to create undo and reset buttons so that users are able to undo and clear their work </p>
+<h3>Link to Sprint 9- <a href = "Sprint 9/internal.html">Sprint 9</a></h3>
+
+
+<h2>My Trello plan </h2>
+<div><img class="imgSizer" src=""></div>
+
+
+<h2> Testing </h2>
+<p>This test shows the two shapes changing between each other with changing the colours </p>
+<div class="vid_div"><video width="600"  controls>
+<source src="" type="video/mp4">
+</video>
+</div>
+
+<!---- Sprint Ten starts down here--> 
+
+<h1> Sprint 10 </h1>
+
+<p>For Sprint 7, my aim is to create undo and reset buttons so that users are able to undo and clear their work </p>
+<h3>Link to Sprint 10- <a href = "Sprint 10/internal.html">Sprint 10</a></h3>
+
+
+<h2>My Trello plan </h2>
+<div><img class="imgSizer" src=""></div>
+
+
+<h2> Testing </h2>
+<p>This test shows the two shapes changing between each other with changing the colours </p>
+<div class="vid_div"><video width="600"  controls>
+<source src="" type="video/mp4">
+</video>
+</div>
+
+
